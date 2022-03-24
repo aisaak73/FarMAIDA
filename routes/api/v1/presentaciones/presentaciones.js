@@ -9,10 +9,10 @@ router.get('/all', async (req, res)=>{
     try{
         const rows = await presentacionModel.getAll();
         res.status(200).json({status:'ok', pacientes: rows});
-    } catch (ex){
+      } catch (ex){
         console.log(ex);
         res.status(500).json({status:'failed'});
-    }
+      }
 });
 
 //GET ONE
